@@ -1,5 +1,5 @@
 # Теоретический курс CS101
-####Записи алгоритмов кодом на Dart по курсу (плейлист [youtube](https://www.youtube.com/watch?v=KdZ4HF1SrFs&list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)) Тимофея Хирьянова "Алгоритмы на Python 3" 2016-2017гг
+#### Записи алгоритмов кодом на Dart по курсу (плейлист [youtube](https://www.youtube.com/watch?v=KdZ4HF1SrFs&list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)) Тимофея Хирьянова "Алгоритмы на Python 3" 2016-2017гг
 
 ## Стек
 ### Dart + Unit testing
