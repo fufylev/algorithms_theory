@@ -4,6 +4,7 @@
 /// теория тут: https://skysmart.ru/articles/mathematic/prostye-i-sostavnye-chisla
 ///
 List<int> sieveOfEratosthenes(int n, {toPrint = false}) {
+  assert(n > 1, 'Число должно быть более 1 так как 1 уже не простое число');
   final array = List.generate(n, (index) => true);
   array[0] = false;
   array[1] = false;

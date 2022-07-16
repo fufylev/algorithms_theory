@@ -1,5 +1,4 @@
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
+import 'package:test/test.dart';
 
 import '../../../lessons/arrays/invert_array.dart';
 
