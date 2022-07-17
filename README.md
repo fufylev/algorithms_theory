@@ -7,18 +7,19 @@
 
 Records of algorithms on Dart according to Timofey Khiryanov's course "Algorithms in Python 3"
 ([link](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)).
-Purpose - to refresh knowledge on algorithms and then move on to a practical course on algorithms.  
+
+The purpose - to refresh knowledge on algorithms and then move on to a practical course on algorithms.  
 
 The course itself is in Python, 
 but I code the algorithms in Dart as I'm currently code in Dart and study the Dart under the hood.
 
 ---
 
-#### Stack: Dart + Unit tests
+#### Stack: ***Dart & Unit tests***
 
 ---
 
-#### Started at: ***13 июля 2022***
+#### Started at: ***13 July 2022***
 
 ---
 
