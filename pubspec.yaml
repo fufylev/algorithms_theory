@@ -7,8 +7,6 @@ environment:
 
 dependencies:
   test: ^1.21.4
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
 
