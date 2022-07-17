@@ -1,4 +1,4 @@
-### Theoretical course (CS101, SC50) - "Algorithms in Python 3",<br> *Moscow Institute of Physics and Technology (MIPT)*.
+### Theoretical course "Algorithms in Python 3", *Moscow Institute of Physics and Technology (MIPT)*.
 <p>
   <a href="https://codecov.io/gh/flutter_community/plus_plugins/">
     <img src="https://codecov.io/gh/fluttercommunity/plus_plugins/graph/badge.svg" alt="all_plugins Coverage"/>
