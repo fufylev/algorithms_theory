@@ -6,10 +6,11 @@
 </p>
 
 Записи алгоритмов кодом на Dart по курсу Тимофея Хирьянова "Алгоритмы на Python 3"
-([ссылка на курс](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)). 
+([ссылка на курс](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)) 
+с целью освежить знания по алгоритмам и далее перейти к практическому курсу по алгоритмам.  
 
 Курс ведется на Python, но я записываю алгоритмы на Dart, так как на данный момент пишу 
-на Dart и развиваюсь в Dart
+на Dart и развиваюсь в Dart.
 
 ---
 
