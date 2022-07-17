@@ -30,7 +30,6 @@ int fibonacciDynamic(n) {
 
 /// Algorithm for calculating the number of possible options for a grasshopper to jump from point 1
 /// to point [n] with list of allowed [points] and a jump length of 1 or 2 or 3 cells.
-///
 int numberOfPossibleJumps(int n, List<bool> points) {
   List<int> k = [0, 1, (points[2] ? 1 : 0), ...List.generate(n - 3, (index) => 0)];
   for (int i = 3; i < n; i++) {
@@ -38,6 +37,6 @@ int numberOfPossibleJumps(int n, List<bool> points) {
       k[i] = k[i - 1] + k[i - 2] + k[i - 3];
     }
   }
-  print(k);
+  // print(k);
   return k[n - 1];
 }
