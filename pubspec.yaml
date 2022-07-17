@@ -1,5 +1,5 @@
 name: algorithms
-description: ...
+description: 'Theoretical course "Algorithms in Python 3", Moscow Institute of Physics and Technology (MIPT).'
 version: 0.0.0
 
 environment:
