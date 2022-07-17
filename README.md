@@ -1,4 +1,4 @@
-### Теоретический курс CS101(SC50) - "Алгоритмы на Python 3" (*Московский Физикотехнический Институт*)
+### Теоретический курс (CS101, SC50) - "Алгоритмы на Python 3",<br> *Московский Физикотехнический Институт*.
 <p>
   <a href="https://codecov.io/gh/flutter_community/plus_plugins/">
     <img src="https://codecov.io/gh/fluttercommunity/plus_plugins/graph/badge.svg" alt="all_plugins Coverage"/>
