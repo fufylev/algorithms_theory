@@ -1,16 +1,16 @@
-/// Выполнение задачек по рекурсии из лекции №8
-/// по курсу Тимофея Хирьянова "Алгоритмы на Python 3"
+/// Performing various tasks of recursion from lecture #8
+///
 /// https://youtu.be/2XFaK3bgT7w?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0
-/// Генерация всех перестановок
+/// Generation of all permutations
 void advanceRecursions() {
   generatePermutations(3);
   // generateNumbers(3, 3, prefix: null);
   // generateBin(3, prefix: '');
 }
 
-/// Генерация все числа (с лидирующими незначащими нулями)
-/// в [n]-ричной системе счисления (N<=10)
-/// длины [m]
+/// Generate all numbers (with leading non-significant zeros)
+/// in [n] number system (N<=10) length of [m]
+///
 void generateNumbers(int n, int m, {List<int> prefix}) {
   prefix ??= [];
   if (m == 0) {
@@ -25,7 +25,7 @@ void generateNumbers(int n, int m, {List<int> prefix}) {
   }
 }
 
-/// Генерация чисел для двоичной системы счисления
+/// Number generation for the binary number system
 void generateBin(m, {prefix = ''}) {
   if (m == 0) {
     print(prefix);
@@ -35,7 +35,7 @@ void generateBin(m, {prefix = ''}) {
   generateBin(m - 1, prefix: prefix + '1');
 }
 
-/// Генерация всех перестановок [n] чисел в [m] позициях с префиксом [prefix]
+/// Generating all permutations of [n] numbers in [m] positions with prefix [prefix]
 void generatePermutations(int n, {int m = -1, List<int> prefix}) {
   m = m == -1 ? n : m;
   prefix ??= [];

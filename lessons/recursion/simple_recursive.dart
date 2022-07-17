@@ -1,5 +1,5 @@
-/// Выполнение задачек по рекурсии из лекции №7
-/// по курсу Тимофея Хирьянова "Алгоритмы на Python 3"
+/// /// Performing various tasks of recursion from lecture #7
+///
 /// https://youtu.be/0Bc8zLURY-c?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0
 ///
 void simpleRecursions() {
@@ -7,19 +7,19 @@ void simpleRecursions() {
   print(gcd(5, 20));
   print(gcdShort(5, 20));
   print(pow(2, 5));
-  print('Минимальное кол-во ходов: ${hanoi(5)}');
+  print('Minimum number of steps: ${hanoi(5)}');
 }
 
-/// Вычисление факториала от числа [n]
+/// Calculating the factorial of a number [n]
 int fac(int n) {
-  assert(n >= 0, 'Факториал не определен');
+  assert(n >= 0, 'Factorial not defined');
   return n == 0 ? 1 : fac(n - 1) * n;
 }
 
-/// Алгоритм Евклида
-/// эффективный алгоритм для нахождения наибольшего общего делителя
-/// (greatest common divisor (gcd)) двух целых чисел (или общей меры двух отрезков)
-/// это общий пример вычисления Алгоритма Евклида
+/// Euclidean algorithm,[note 1] or Euclid's algorithm, is an efficient method for computing
+/// the greatest common divisor (GCD) of two integers (numbers), the largest number
+/// that divides them both without a remainder
+/// this is a general example of calculating the Euclid's Algorithm
 int gcd(int a, int b) {
   if (a == b)
     return a;
@@ -30,15 +30,15 @@ int gcd(int a, int b) {
   }
 }
 
-/// Алгоритм Евклида
-/// эффективный алгоритм для нахождения наибольшего общего делителя
-/// (greatest common divisor (gcd)) двух целых чисел (или общей меры двух отрезков)
-/// это короткий пример вычисления Алгоритма Евклида
+/// Euclidean algorithm,[note 1] or Euclid's algorithm, is an efficient method for computing
+/// the greatest common divisor (GCD) of two integers (numbers), the largest number
+/// that divides them both without a remainder
+/// this is the shortest example of calculating the Euclid's Algorithm
 int gcdShort(int a, int b) {
   return b == 0 ? a : gcdShort(b, a % b);
 }
 
-/// функция быстрого возведения в степень
+/// quick exponentiation function
 pow(num a, int n) {
   assert(n >= 0, 'степень должна быть больше 0');
   return n == 0
@@ -48,11 +48,11 @@ pow(num a, int n) {
           : pow(a * a, (n / 2).floor());
 }
 
-/// Ханойская башня - алгоритм перекладывания дисков башни с кол-вом дисков [n]
-/// и кол-вом башен равным 3
+/// Tower of Hanoi - Algorithm for shifting the disks of a tower with the number of disks [n]
+/// and the number of towers equal to 3
+///
 int hanoi(int n) {
-  /// кол-во шагов выполнения алгоритма
-  int count = 0;
+  int count = 0; // minimum number of algorithm execution steps
   String a = 'A';
   String b = 'B';
   String c = 'C';
@@ -60,7 +60,7 @@ int hanoi(int n) {
   void hanoiImpl(int n, String a, String b, String c) {
     void moveNext(int n, String i, String j) {
       count++;
-      // print('Ход №$count: Номер диска $n перемещается $i -> $j');
+      // step('Step №$count: disk #$n move $i -> $j');
     }
 
     if (n == 1) {
@@ -76,10 +76,10 @@ int hanoi(int n) {
   return count;
 }
 
-/// Рисование прямоугольников со смещением альфа
-/// Данную задачу нельзя отобразить на Dart поэтому она выполнена в проекте Flutter
-/// и перенесена сюда в виде класса исполнителя для информации и закомментировал
-/// чтобы не выдавала ошибку
+/// Drawing rectangles with offset alpha
+/// This task cannot be displayed on Dart, so it was done in the Flutter project and moved here as
+/// an executor class for information and commented out so that it does not throw an error
+
 /*class Squares extends StatefulWidget {
   const Squares({Key key}) : super(key: key);
 
@@ -101,7 +101,7 @@ class _SquaresState extends State<Squares> {
 class Impl extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    /// величина смещения [alpha]
+    /// offset value [alpha]
     const alpha = 0.1;
 
     Paint paint = Paint()
@@ -117,9 +117,9 @@ class Impl extends CustomPainter {
       canvas.drawLine(C, D, paint);
       canvas.drawLine(D, A, paint);
 
-      /// точка А1dx будет равна: (1-alpha) * Adx + alpha * Bdx
-      /// а точка А1dу будет равна: (1-alpha) * Adу + alpha * Bdу
-      /// по такому же принципу перепишем все точки для следующего прямоугольника
+      /// point A1dx will be equal to: (1-alpha) * Adx + alpha * Bdx
+      /// point A1dy will be equal to: (1-alpha) * Adу + alpha * Bdу
+      /// by the same principle, we will rewrite all the points for the next rectangle
       final a1 = Offset(A.dx * (1 - alpha) + B.dx * alpha, A.dy * (1 - alpha) + B.dy * alpha);
       final b1 = Offset(B.dx * (1 - alpha) + C.dx * alpha, B.dy * (1 - alpha) + C.dy * alpha);
       final c1 = Offset(C.dx * (1 - alpha) + D.dx * alpha, C.dy * (1 - alpha) + D.dy * alpha);

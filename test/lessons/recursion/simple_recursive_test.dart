@@ -3,25 +3,28 @@ import 'package:test/test.dart';
 import '../../../lessons/recursion/simple_recursive.dart';
 
 void main() {
-  group('Проверка всех алгоритмов простых рекурсий', () {
-    test('Вычисление факториала от числа [n]', () {
+  group('Verification of all simple recursion algorithms', () {
+    test('Calculating the factorial of a number [n]', () {
       expect(fac(5), 120);
     });
 
-    test('Алгоритм Евклида общий', () {
+    test("Euclid's general algorithm", () {
       expect(gcd(5, 20), 5);
     });
 
-    test('Алгоритм Евклида короткий', () {
+    test("Euclid's short algorithm", () {
       expect(gcdShort(5, 20), 5);
     });
 
-    test('функция быстрого возведения в степень', () {
+    test('quick exponentiation function', () {
       expect(pow(2, 5), 32);
     });
 
-    test('Ханойская башня - алгоритм перекладывания дисков башни с кол-вом дисков [n]', () {
-      expect(hanoi(5), 31);
-    });
+    test(
+      'Tower of Hanoi - Algorithm for shifting the disks of a tower with the number of disks [n]',
+      () {
+        expect(hanoi(5), 31);
+      },
+    );
   });
 }

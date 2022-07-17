@@ -4,7 +4,7 @@ import 'package:test/scaffolding.dart';
 import '../../../lessons/arrays/sieve_of_eratosthenes.dart';
 
 void main() {
-  test('Проверка алгоритма вывода всех простых чисел', () {
+  test('Checking the algorithm for deriving all prime numbers', () {
     // Arrange
     final length = 120;
     final simpleNumbers = [
