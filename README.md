@@ -1,7 +1,7 @@
 ### Теоретический курс CS101(SC50) - "Алгоритмы на Python 3" (*Московский Физикотехнический Институт*)
 
 Записи алгоритмов кодом на Dart по курсу 
-(плейлист [youtube](https://www.youtube.com/watch?v=KdZ4HF1SrFs&list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)) 
+(плейлист [youtube](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)) 
 Тимофея Хирьянова "Алгоритмы на Python 3" 2016-2017гг. 
 
 Курс ведется на Python, но я записываю алгоритмы на Dart, так как на данный момент пишу 
