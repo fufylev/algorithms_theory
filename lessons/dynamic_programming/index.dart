@@ -9,8 +9,9 @@ to the overall problem depends upon the optimal solution to its subproblems.
 /// https://youtu.be/EdhN_gEDfUM?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0&t=1110
 ///
 void dynamicProgramming() {
-  print(fibonacciDynamic(10));
-  numberOfPossibleJumps(10, [false, true, true, ...List.generate(10 - 3, (index) => true)]);
+  // print(fibonacciDynamic(10));
+  // numberOfPossibleJumps(10, [false, true, true, ...List.generate(10 - 3, (index) => true)]);
+  print(computePossibleWays().toString());
 }
 
 /// BAD 👎 example of Fibonacci calculation => algorithm's complexity is [O(Fibonacci(n))]
@@ -39,4 +40,55 @@ int numberOfPossibleJumps(int n, List<bool> points) {
   }
   // print(k);
   return k[n - 1];
+}
+
+/// King's board
+/*
+  How many ways for the King to come from [X1,Y1] to [X9,Y9]
+  Here is a table I've calculated manually
+  From the first glance we can recognize a Pascal's triangle rotated by 45 deg - cool !!!!
+
+    ---------------------------------------------------------> Y
+    | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
+    ------------------------------------------------------
+    | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
+    ------------------------------------------------------
+    | 1   | 3   | 6   | 10  | 15  | 21  | 28  | 36  | 45  |
+    ------------------------------------------------------
+    | 1   | 4   | 10  | 20  | 35  | 56  | 84  | 120 | 165 |
+    ------------------------------------------------------
+    | 1   | 5   | 15  | 35  | 70  | 126 | 210 | 330 | 495 |
+    ------------------------------------------------------
+    | 1   | 6   | 21  | 56  | 126 | 252 | 462 | 972 | 1287|
+    ------------------------------------------------------
+    | 1   | 7   | 28  | 84  | 210 | 462 | 924 | 1716| 3003|
+    ------------------------------------------------------
+    | 1   | 8   | 36  | 120 | 330 | 792 | 1716| 3432| 6435|
+    ------------------------------------------------------
+    | 1   | 9   | 45  | 165 | 495 | 1287| 3003| 6435|12870|
+    ------------------------------------------------------
+    |
+    v
+    X
+*/
+
+const size = 9;
+int computePossibleWays() {
+  // generate an two-dimensions Array filled with 0s
+  var list = List.generate(size, (index) => List.generate(size, (index) => 0));
+
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      if (i == 0 || j == 0) {
+        // fill the 1st row and the 1st column with 1s
+        list[i][j] = 1;
+        continue;
+      }
+
+      // return the last element with is the result of possible ways
+      list[i][j] = list[i][j - 1] + list[i - 1][j];
+    }
+  }
+
+  return list[size - 1][size - 1]; // => 12870 with size == 9;
 }
