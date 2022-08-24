@@ -44,7 +44,8 @@ int numberOfPossibleJumps(int n, List<bool> points) {
 
 /// King's board
 /*
-  How many ways for the King to come from [X1,Y1] to [X9,Y9]
+  How many ways for the King to come from [X1,Y1] to [X9,Y9] if he is permitted to move only to
+  the right and down
   Here is a table I've calculated manually
   From the first glance we can recognize a Pascal's triangle rotated by 45 deg - cool !!!!
 
